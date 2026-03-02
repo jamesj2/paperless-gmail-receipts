@@ -16,6 +16,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 from pypdf import PdfWriter, PdfReader
 
+# Add local vendor directory to path (for containerized installs)
+_vendor_dir = Path(__file__).parent / "vendor"
+if _vendor_dir.is_dir():
+    sys.path.insert(0, str(_vendor_dir))
+
 load_dotenv()
 
 # =========================

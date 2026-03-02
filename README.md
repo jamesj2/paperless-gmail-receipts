@@ -26,12 +26,19 @@ Automatically fetches receipt and invoice emails from Gmail via IMAP, renders em
    ```bash
    git clone https://github.com/jamesj2/paperless-gmail-receipts.git
    cd paperless-gmail-receipts
+
+   # Create a virtual environment
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
 2. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   #pip install -r requirements.txt
+   docker exec -it paperless-ngx pip install \
+     --target /usr/src/paperless/scripts/paperless-gmail-receipts/vendor \
+     -r /usr/src/paperless/scripts/paperless-gmail-receipts/requirements.txt 2>/dev/null
    ```
 
 3. Copy the example environment file and fill in your values:
