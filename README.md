@@ -38,10 +38,7 @@ Automatically fetches receipt and invoice emails from Gmail via IMAP, renders em
 2. Install dependencies:
 
    ```bash
-   #pip install -r requirements.txt
-   docker exec -it paperless-ngx pip install \
-     --target /usr/src/paperless/scripts/paperless-gmail-receipts/vendor \
-     -r /usr/src/paperless/scripts/paperless-gmail-receipts/requirements.txt 2>/dev/null
+   pip install -r requirements.txt
    ```
 
 3. Copy the example environment file and fill in your values:
