@@ -27,6 +27,9 @@ Automatically fetches receipt and invoice emails from Gmail via IMAP, renders em
    git clone https://github.com/jamesj2/paperless-gmail-receipts.git
    cd paperless-gmail-receipts
 
+   # Make script executable
+   chmod +x downloader.py
+
    # Create a virtual environment
    python3 -m venv venv
    source venv/bin/activate
